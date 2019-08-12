@@ -95,6 +95,17 @@ FriendlyEats.prototype.getRandomItem = function(arr) {
 
 FriendlyEats.prototype.data = {
   words: [
+    'Cecil',
+    'Kent',
+    'Brown',
+    'Thurston',
+    'Howell',
+    'Candace',
+    'Jerry',
+    'Phillip',
+    'Donald'
+  ],
+  words1: [
     'Bar',
     'Fire',
     'Grill',
