@@ -166,8 +166,8 @@ FriendlyEats.prototype.data = {
     'Washington'
   ],
   categories: [
-    'Donors',
-    'Guests'
+    'Donor',
+    'Guest'
   ],
   categories1: [
     'Brunch',
