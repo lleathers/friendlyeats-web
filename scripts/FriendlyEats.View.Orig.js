@@ -15,10 +15,6 @@
  */
 'use strict';
 
-var storage = firebase.storage();
-var storageRef = storage.ref();
-
-
 FriendlyEats.prototype.initTemplates = function() {
   this.templates = {};
 
@@ -454,19 +450,12 @@ FriendlyEats.prototype.render = function(el, data) {
       var chunks = tel.getAttribute('data-fir-style').split(':');
       var attr = chunks[0];
       var field = chunks[1];
-
       var value = that.getDeepItem(data, field);
 
-      storageRef.child(value).getDownloadURL().then(function(urlimage) {
-      
-        if (attr.toLowerCase() === 'backgroundimage') {
-          value = 'url(' + urlimage + ')';
-        }
- 
-        tel.style[attr] = value;
-        }).catch(function(error) {
-         // Handle errors
-        });
+      if (attr.toLowerCase() === 'backgroundimage') {
+        value = 'url(' + value + ')';
+      }
+      tel.style[attr] = value;
     }
   };
 

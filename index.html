@@ -17,7 +17,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Learn how to use the Firebase platform on the Web">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FriendlyEats</title>
+  <title>NeighborsBake</title>
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
@@ -64,7 +64,7 @@
         <div id="title" class="mdc-toolbar__row mdc-layout-grid">
           <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
             <span class="material-icons mdc-toolbar__icon--menu">attach_money</span>
-            <span class="mdc-toolbar__title">DonorPays</span>
+            <span class="mdc-toolbar__title">NeighborsBake</span>
           </section>
         </div>
         <div id="section-header" data-fir-if="hasSectionHeader"></div>
@@ -355,9 +355,11 @@
   </aside>
 </div>
 
-<script src="/__/firebase/6.3.5/firebase-app.js"></script>
-<script src="/__/firebase/6.3.5/firebase-auth.js"></script>
-<script src="/__/firebase/6.3.5/firebase-firestore.js"></script>
+
+<script src="/__/firebase/7.17.1/firebase-app.js"></script>
+<script src="/__/firebase/7.17.1/firebase-auth.js"></script>
+<script src="/__/firebase/7.17.1/firebase-firestore.js"></script>
+<script src="/__/firebase/7.17.1/firebase-storage.js"></script>
 <script src="/__/firebase/init.js"></script>
 
 <script src="//unpkg.com/navigo@6"></script>
@@ -366,5 +368,21 @@
 <script src="/scripts/FriendlyEats.View.js"></script>
 <script src="/scripts/FriendlyEats.Mock.js"></script>
 <script src="/scripts/FriendlyEats.Data.js"></script>
+
+<script>
+/*
+   var firebaseConfig = {
+     apiKey: 'AIzaSyCXbXPST6tO5qP-ZDpfGk9U1ZKZ8SznbVs',
+     storageBucket: 'friendlyeats-a2598.appspot.com'
+   };
+   firebase.initializeApp(firebaseConfig);
+
+   // Get a reference to storage service
+   var storage = firebase.storage();
+   var storageRef = storage.ref();
+   var imagesRef = storageRef.child('what');   
+*/
+</script>
+
 </body>
 </html>

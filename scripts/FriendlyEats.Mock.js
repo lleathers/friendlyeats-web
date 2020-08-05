@@ -21,6 +21,9 @@
 FriendlyEats.prototype.addMockRestaurants = function() {
   var promises = [];
 
+  var storage = firebase.storage();
+  var storageRef = storage.ref();
+
   for (var i = 0; i < 20; i++) {
     var name =
         this.getRandomItem(this.data.words) +
@@ -29,8 +32,16 @@ FriendlyEats.prototype.addMockRestaurants = function() {
     var category = this.getRandomItem(this.data.categories);
     var city = this.getRandomItem(this.data.cities);
     var price = Math.floor(Math.random() * 4) + 1;
+/*
     var photoID = Math.floor(Math.random() * 22) + 1;
     var photo = 'https://storage.googleapis.com/firestorequickstarts.appspot.com/food_' + photoID + '.png';
+*/
+/*  Customized food references for events */
+
+    var photoID = Math.floor(Math.random() * 5);
+    var fileName = "what/" + photoID.toString() + ".png";
+    var photo = fileName;
+
     var numRatings = 0;
     var avgRating = 0;
 
@@ -41,7 +52,7 @@ FriendlyEats.prototype.addMockRestaurants = function() {
       city: city,
       numRatings: numRatings,
       avgRating: avgRating,
-      photo: photo
+      photo: photo 
     });
 
     if (!promise) {
